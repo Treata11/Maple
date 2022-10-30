@@ -1,0 +1,14 @@
+plots:-display(
+  plots:-spacecurve([exp(t)*cos(t),exp(t)*sin(t),exp(t)-1],t=0..2*Pi,
+                    color=red),
+  plots:-implicitplot3d(x^2+y^2=(z+1)^2,x=-10..10,y=-10..10,z=0..9,
+                        grid=[30,30,30],style=patchnogrid,
+                        transparency=0.5),
+  view=[-10..10,-10..10,0..9] );
+
+ plots:-display(
+   plots:-spacecurve([exp(t)*cos(t),exp(t)*sin(t),exp(t)-1],t=0..2*Pi,
+                     color=red),
+   plot3d(r+1,theta=0..2*Pi,r=0..9,coords=cylindrical,
+          style=patchnogrid,transparency=0.5),
+   view=[-10..10,-10..10,0..9] );
