@@ -1,0 +1,20 @@
+with(plots):
+a := 2:
+b := 4:
+c := 1:
+f := (x, y) -> c^2*(x^2/a^2 - y^2/b^2):
+plot3d( f(x, y), x = -a..a, y = -b..b, axes = boxed );
+
+with(plots):
+a := 2:
+b := 4:
+c := 1:
+f := (x, y) -> c^2*(x^2/a^2 - y^2/b^2):
+surf := plot3d( f(x, y), x = -a..a, y = -b..b, axes = boxed ):
+xaxis := spacecurve([t, 0, 0, t = -a..a, color = magenta]) :
+yaxis := spacecurve([0, t, 0, t = -b..1.7*b, color = magenta]) :
+zaxis := spacecurve([0, 0, t, t = -2..2, color = magenta]) :
+labx := textplot3d([a, 0, -.2, `x`], color = magenta):
+laby := textplot3d([0, 1.7*b , -.2, `y`], color = magenta):
+labz := textplot3d([0, 0, 2, `z`], color = magenta):
+display(surf, xaxis, yaxis, zaxis, labx, laby,labz);
