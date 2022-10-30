@@ -1,0 +1,30 @@
+with(plots);
+a := 2;
+b := 3;
+c := 2;
+surf2 := implicitplot3d(x^2/a^2 - y^2/b^2 + z^2/c^2 = 1, x = -3*a .. 3*a, y = -2*b .. 2*b, z = -3*c .. 3*c, axes = boxed, grid = [30, 20, 30]);
+xaxis := spacecurve([t, 0, 0, t = -3*a .. 3*a, color = magenta]);
+yaxis := spacecurve([0, t, 0, t = -2*b .. 3*b, color = magenta]);
+zaxis := spacecurve([0, 0, t, t = -3*c .. 3*c, color = magenta]);
+labx := textplot3d([3*a, 0, -0.2, x], color = magenta);
+laby := textplot3d([0, 3*b, -0.2, y], color = magenta);
+labz := textplot3d([0, 0, 3*c, z], color = magenta);
+display(surf2, xaxis, yaxis, zaxis, labx, laby, labz);
+
+NULL;
+NULL;
+NULL;
+ with(plots):
+a := 2:
+b := 3:
+c := 2:
+surf2 := implicitplot3d( x^2/a^2 - y^2/b^2 + z^2/c^2 = 1,
+x = -3*a..3*a, y = -2*b..2*b, z = -3*c..3*c,
+axes = boxed, grid = [30, 20, 30] ):
+xaxis := spacecurve([t, 0, 0, t = -3*a..3*a, color = magenta]) :
+yaxis := spacecurve([0, t, 0, t = -2*b..3*b, color = magenta]) :
+zaxis := spacecurve([0, 0, t, t = -3*c..3*c, color = magenta]) :
+labx := textplot3d([3*a, 0, -.2, `x`], color = magenta):
+laby := textplot3d([0, 3*b , -.2, `y`], color = magenta):
+labz := textplot3d([0, 0, 3*c, `z`], color = magenta):
+display(surf2, xaxis, yaxis, zaxis, labx, laby,labz);
