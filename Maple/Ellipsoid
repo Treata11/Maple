@@ -1,0 +1,1 @@
+plots:-display(plots:-spacecurve([exp(t)*cos(t), exp(t)*sin(t), exp(t) - 1], t = 0 .. 2*Pi, color = red), plots:-implicitplot3d(ellip1, x = -1 .. 1, y = -2 .. 2, z = -3 .. 3, scaling = constrained, axes = frame, grid = [39, 39, 39], style = patchnogrid, transparency = 0.5), view = [-5 .. 5, -5 .. 5, -5 .. 5])
